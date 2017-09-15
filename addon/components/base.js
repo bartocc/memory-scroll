@@ -35,9 +35,9 @@ export default Component.extend({
 
   restore(key) {
     var position = this.get('memory')[key] || 0;
-    var elt = this.targetElement();
+    var elt = this.$();
     if (elt) {
-      elt.scrollTop = position;
+      elt.offset({top: position});
     }
   }
 
