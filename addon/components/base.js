@@ -28,17 +28,14 @@ export default Component.extend({
 
   remember(key) {
     if (key) {
-      var position = this.$().offset().top;
+      var position = window.scrollY;
       this.get('memory')[key] = position;
     }
   },
 
   restore(key) {
     var position = this.get('memory')[key] || 0;
-    var elt = this.$();
-    if (elt) {
-      elt.offset({top: position});
-    }
+    window.scrollTo(0, position);
   }
 
 });
