@@ -19,7 +19,7 @@ export default Component.extend({
       this._lastKey = key;
       Ember.run.next(function() {
         this.restore(key);        
-      });
+      }.bind(this));
     }
   },
 
