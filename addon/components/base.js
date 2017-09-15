@@ -28,7 +28,7 @@ export default Component.extend({
 
   remember(key) {
     if (key) {
-      var position = this.$.offset().top;
+      var position = this.$().offset().top;
       this.get('memory')[key] = position;
     }
   },
