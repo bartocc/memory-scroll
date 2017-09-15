@@ -17,7 +17,7 @@ export default Component.extend({
     if (key !== this._lastKey) {
       this.remember(this._lastKey);
       this._lastKey = key;
-      Ember.run.next(function() {
+      Ember.$(document).ready(function() {
         this.restore(key);        
       }.bind(this));
     }
